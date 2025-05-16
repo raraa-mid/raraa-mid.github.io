@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+    position: absolute;
+    left: -250px;
+    width: 250px;
+    height: 150%;
+    top: 0%;
+    background-color: rgb(15, 15, 15);
+    transition: all .5s ease;
+}
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background: rgb(31, 31, 31);
+    user-select: none;
+    top: 0%;
+    font-family: 'Times New Roman';
+}
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px;
+    border-top: 1px;
+    transition: 4s;
+    font-family: 'Times New Roman';
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 16px;
+    
+}
+#check {
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    cursor: pointer;
+}
+label #btn{
+    position: fixed;
+    left: 50px;
+    top: 25px;
+    font-size: 35px;
+    color: white; 
+    padding: 6px 12px;
+    transition: all .5s;
+}
+label #cancel{
+    position: fixed;
+    z-index: 1111;
+    left: -195px;
+    top: 20px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 220px;
+    top: 10px;
+}
+#check:checked ~ section{
+    margin-left: 250px;
+}
+#Home {
+    background-color: rgb(0, 0, 0);
+    transition: all .5s;
+    text-align: center;
+    color: white;
+}
+#Contact {
+    background-color: rgb(0, 0, 0);
+    transition: all .5s;
+    text-align: center;
+    color: white;
+}
+#About {
+    background-color: rgb(0, 0, 0);
+    transition: all .5s;
+    text-align: center;
+    color: white;
+}
+button {
+    color: rgb(255, 255, 255); 
+    padding: 6px 8px;
+    transition: all .5s;
+    font-family: 'Times New Roman';
+    background-color: rgb(27, 27, 27);
+}
